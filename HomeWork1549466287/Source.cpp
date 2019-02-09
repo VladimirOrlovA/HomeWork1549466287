@@ -103,7 +103,7 @@ void Task1()
 
 		int const n = 10;
 		
-		char arr[n] = { 0 }, x;
+		int arr[n] = { 0 }, x;
 
 		cin >> x;
 
@@ -122,7 +122,7 @@ void Task2()
 
 	int const n = 10;
 	
-	char arr[n] = { 0 };
+	int arr[n] = { 0 };
 		
 	FillArray(arr, n);
 	PrintArray(arr, n);
