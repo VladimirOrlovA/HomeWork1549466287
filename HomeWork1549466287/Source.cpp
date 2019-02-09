@@ -140,11 +140,12 @@ int main()
 	setlocale(LC_ALL, "");
 	srand(time(NULL));
 
-	int number, flag;
+	int number;
+	char flag;
 
 	do
 	{
-		cout << "Enter number of Task (1) to (2) => ";
+		cout << endl << "Enter number of Task (1) to (2) => ";
 		cin >> number;
 
 		switch (number)
@@ -160,10 +161,10 @@ int main()
 		cout << "\n--------------------------------------------------------------------------\n\n";
 		SetConsoleTextAttribute(hConsole, 7);
 
-		cout << "Do you want to continue? 1/0 => ";
+		cout << "Do you want to continue? \n\nIf YES press (y) if NO any keys => ";
 		cin >> flag;
 
-	} while (flag == 1);
+	} while (flag == 'y');
 
 	
 	if (flag == 1)
