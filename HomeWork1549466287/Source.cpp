@@ -3,15 +3,18 @@
 #include<time.h>
 #include<Windows.h>
 
+
 using namespace std;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
 
 void FillArrayOrder(int arr[], int n)
 {
 	for (int i = 0; i < n; i++)
 		arr[i] = i;
 }
+
 
 void FillArray(int arr[], int n)
 {
@@ -33,6 +36,7 @@ void FillArray(char arr[], int n)
 	for (int i = 0; i < n; i++)
 		arr[i] = rand() % 256;
 }
+
 
 void PrintArray(int arr[], int n)
 {
@@ -64,7 +68,8 @@ void PrintArray(char arr[], int n)
 	cout << endl << endl;
 }
 
-void SearchMax(char arr[], int n, char x)
+template<typename T>
+void SearchMax(T arr[], int n, T x)
 {
 	int count = 0;
 
@@ -76,9 +81,10 @@ void SearchMax(char arr[], int n, char x)
 	cout << "Кол-во элементов больше " << x << " =>  " << count << endl << endl;
 }
 
-void ReorderingArray(int arr[], int n)
+template<typename T>
+void ReorderingArray(T arr[], int n)
 {
-	int c;
+	T c;
 	for (int i = 0; i < n / 2; i++)
 	{
 		c = arr[i];
@@ -96,14 +102,16 @@ void Task1()
 	SetConsoleTextAttribute(hConsole, 7);
 
 		int const n = 10;
-		char arr[n] = { 0 }, x = 'C';
+		
+		char arr[n] = { 0 }, x;
+
+		cin >> x;
 
 		FillArray(arr, n);
 		PrintArray(arr, n);
 		SearchMax(arr, n, x);
 	
 }
-
 
 void Task2()
 {
@@ -113,9 +121,10 @@ void Task2()
 	SetConsoleTextAttribute(hConsole, 7);
 
 	int const n = 10;
-	int arr[n] = { 0 };
+	
+	char arr[n] = { 0 };
 		
-	FillArrayOrder(arr, n);
+	FillArray(arr, n);
 	PrintArray(arr, n);
 	ReorderingArray(arr, n);
 	PrintArray(arr, n);
