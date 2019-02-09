@@ -165,10 +165,5 @@ int main()
 		cin >> flag;
 
 	} while (flag == 'y');
-
-	
-	if (flag == 1)
-		system("pause");
-	
 }
 
