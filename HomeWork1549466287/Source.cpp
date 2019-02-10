@@ -135,7 +135,10 @@ void Task2()
 
 int main()
 {
-	cout << "\n  06_02_2019_1549466287 \n\n";
+	SetConsoleTextAttribute(hConsole, 10);
+	cout << "\n  06_02_2019  1549466287 \n\n";
+	SetConsoleTextAttribute(hConsole, 7);
+	
 	
 	setlocale(LC_ALL, "");
 	srand(time(NULL));
